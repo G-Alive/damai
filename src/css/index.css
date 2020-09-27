@@ -15,7 +15,141 @@ html {
 .header {
     width: 100%;
     height: 72px;
-    background-color: red;
+}
+
+.header .headerw1200 {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    font-size: 0;
+}
+
+.header .headerw1200 a {
+    cursor: pointer;
+}
+
+.headerw1200 .dlogo {
+    width: 92px;
+    height: auto;
+    margin-top: 15px;
+    float: left;
+}
+
+.header-location {
+    display: block;
+    height: 100%;
+    float: left;
+    position: relative;
+    margin-left: 54px;
+    line-height: 72px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.header-location .icon-location {
+    width: 12px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header-location .city-location {
+    max-width: 60px;
+    font-size: 16px;
+    color: #2D2D2D;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.header-location .arrow-location {
+    width: 9px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header-recommend {
+    max-width: 220px;
+    height: 100%;
+    float: left;
+    margin-right: -20px;
+    margin-left: 40px;
+    line-height: 72px;
+    overflow: hidden;
+}
+
+.header-recommend .type-recommend {
+    display: inline-block;
+    font-size: 16px;
+    color: #000;
+    margin-right: 18px;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.header-recommend .select {
+    color: #FF1268;
+    cursor: pointer;
+}
+
+.header-search {
+    width: 401px;
+    height: 46px;
+    margin-top: 12px;
+    margin-right: 20px;
+    line-height: 46px;
+    float: right;
+    position: relative;
+}
+
+.header-search .i-search {
+    width: 17px;
+    position: absolute;
+    left: 22px;
+    top: 15px;
+    z-index: 11;
+}
+
+.header-search .input-search {
+    width: 253px;
+    height: 44px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    font-size: 16px;
+    background-color: transparent;
+    outline: 0;
+    -webkit-appearance: none;
+    border: 0;
+    padding: 0 10px 0 54px;
+    border-top-left-radius: 46px;
+    border-bottom-left-radius: 46px;
+    border: 1px solid #f8f8f8;
+    background-color: #f8f8f8;
+    border-right-color: #FF1268;
+    box-sizing: content-box;
+}
+
+.header-search .btn-search {
+    width: 82px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #FF1268;
+    line-height: 46px;
+    font-size: 16px;
+    text-align: center;
+    color: #FFF;
+    border-radius: 0 27px 27px 0;
+    z-index: 11;
+    letter-spacing: 4px;
+    cursor: pointer;
 }
 
 
@@ -25,7 +159,6 @@ html {
     height: 320px;
     position: relative;
     overflow: hidden;
-    background: gray;
 }
 
 .banner {
@@ -43,7 +176,6 @@ html {
     margin-top: 15px !important;
     padding: 22px 0 25px 0;
     border: 1px solid #EBEBEB;
-    background-color: skyblue;
     width: 1200px;
     margin: 0 auto;
 }
@@ -57,6 +189,27 @@ html {
     content: '.';
 }
 
+.nav .nav_list {
+    float: left;
+    display: block;
+    width: 120px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav .nav_list span {
+    display: block;
+    font-size: 40px;
+    margin: 0 auto;
+    background-size: 100% auto;
+}
+
+.nav .nav_list p {
+    font-size: 16px;
+    color: #111;
+    text-align: center;
+}
+
 
 /* 内容 */
 
@@ -66,6 +219,9 @@ html {
     position: relative;
     font-size: 0;
 }
+
+
+/* 内容1 */
 
 .content-one {
     width: 1160px;
@@ -79,7 +235,6 @@ html {
     width: 100%;
     height: 40px;
     line-height: 40px;
-    background-color: pink;
 }
 
 .content .content-one .head .head-title {
@@ -115,7 +270,7 @@ html {
     height: 360px;
     position: relative;
     overflow: hidden;
-    background-color: orange;
+    background-color: pink;
 }
 
 .content .content-one .box .box-left .box-left_info {
@@ -151,7 +306,89 @@ html {
     height: 360px;
     vertical-align: top;
     overflow: hidden;
-    background-color: lightblue;
+}
+
+.content .content-one .box .box-right li {
+    width: 273px;
+    height: 160px;
+    margin-right: 15px;
+    display: inline-block;
+    margin-bottom: 40px;
+    color: #000;
+    overflow: hidden;
+    list-style: none;
+}
+
+.content .content-one .box .box-right li a {
+    text-decoration: none;
+}
+
+.content .content-one .box .box-right li a .iteming1 {
+    width: 118px;
+    height: 158px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    border: 1px solid #efefef;
+}
+
+.content .content-one .box .box-right li a .iteming1 img {
+    width: 100%;
+}
+
+.content .content-one .box .box-right li a .iteming2 {
+    width: 138px;
+    height: 100%;
+    position: relative;
+    padding-left: 15px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.content .content-one .box .box-right li a .iteming2 title {
+    line-height: 20px;
+    font-size: 14px;
+    color: #4A4A4A;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.content .content-one .box .box-right li a .iteming2 strong {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 12px;
+    margin-top: 14px;
+    color: #9B9B9B;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+.content .content-one .box .box-right li a .iteming2 p {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 12px;
+    margin-top: 14px;
+    color: #9B9B9B;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+.content .content-one .box .box-right li a .iteming2 span {
+    width: 138px;
+    position: absolute;
+    left: 15px;
+    bottom: 0;
+    font-size: 16px;
+    color: #FF1268;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
@@ -169,7 +406,6 @@ html {
     width: 100%;
     height: 40px;
     line-height: 40px;
-    background-color: pink;
 }
 
 .content .content-two .head .head-title {
@@ -241,7 +477,89 @@ html {
     height: 360px;
     vertical-align: top;
     overflow: hidden;
-    background-color: lightblue;
+}
+
+.content .content-two .box .box-right li {
+    width: 273px;
+    height: 160px;
+    margin-right: 15px;
+    display: inline-block;
+    margin-bottom: 40px;
+    color: #000;
+    overflow: hidden;
+    list-style: none;
+}
+
+.content .content-two .box .box-right li a {
+    text-decoration: none;
+}
+
+.content .content-two .box .box-right li a .iteming1 {
+    width: 118px;
+    height: 158px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    border: 1px solid #efefef;
+}
+
+.content .content-two .box .box-right li a .iteming1 img {
+    width: 100%;
+}
+
+.content .content-two .box .box-right li a .iteming2 {
+    width: 138px;
+    height: 100%;
+    position: relative;
+    padding-left: 15px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.content .content-two .box .box-right li a .iteming2 title {
+    line-height: 20px;
+    font-size: 14px;
+    color: #4A4A4A;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.content .content-two .box .box-right li a .iteming2 strong {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 12px;
+    margin-top: 14px;
+    color: #9B9B9B;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+.content .content-two .box .box-right li a .iteming2 p {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 12px;
+    margin-top: 14px;
+    color: #9B9B9B;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+.content .content-two .box .box-right li a .iteming2 span {
+    width: 138px;
+    position: absolute;
+    left: 15px;
+    bottom: 0;
+    font-size: 16px;
+    color: #FF1268;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
@@ -259,7 +577,6 @@ html {
     width: 100%;
     height: 40px;
     line-height: 40px;
-    background-color: pink;
 }
 
 .content .content-three .head .head-title {
@@ -295,7 +612,6 @@ html {
     height: 360px;
     position: relative;
     overflow: hidden;
-    background-color: orange;
 }
 
 .content .content-three .box .box-left .box-left_info {
@@ -331,7 +647,88 @@ html {
     height: 360px;
     vertical-align: top;
     overflow: hidden;
-    background-color: lightblue;
+}
+
+.content .content-three .box .box-right li {
+    width: 273px;
+    height: 160px;
+    margin-right: 15px;
+    display: inline-block;
+    margin-bottom: 40px;
+    color: #000;
+    overflow: hidden;
+}
+
+.content .content-three .box .box-right li a {
+    text-decoration: none;
+}
+
+.content .content-three .box .box-right li a .iteming1 {
+    width: 118px;
+    height: 158px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    border: 1px solid #efefef;
+}
+
+.content .content-three .box .box-right li a .iteming1 img {
+    width: 100%;
+}
+
+.content .content-three .box .box-right li a .iteming2 {
+    width: 138px;
+    height: 100%;
+    position: relative;
+    padding-left: 15px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.content .content-three .box .box-right li a .iteming2 title {
+    line-height: 20px;
+    font-size: 14px;
+    color: #4A4A4A;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.content .content-three .box .box-right li a .iteming2 strong {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 12px;
+    margin-top: 14px;
+    color: #9B9B9B;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+.content .content-three .box .box-right li a .iteming2 p {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 12px;
+    margin-top: 14px;
+    color: #9B9B9B;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+.content .content-three .box .box-right li a .iteming2 span {
+    width: 138px;
+    position: absolute;
+    left: 15px;
+    bottom: 0;
+    font-size: 16px;
+    color: #FF1268;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
@@ -349,7 +746,6 @@ html {
     width: 100%;
     height: 40px;
     line-height: 40px;
-    background-color: pink;
 }
 
 .content .content-four .head .head-title {
@@ -421,7 +817,98 @@ html {
     height: 360px;
     vertical-align: top;
     overflow: hidden;
-    background-color: lightblue;
+}
+
+.content .content-four .box .box-right li {
+    width: 273px;
+    height: 160px;
+    margin-right: 15px;
+    display: inline-block;
+    margin-bottom: 40px;
+    color: #000;
+    overflow: hidden;
+}
+
+.content .content-four .box .box-right li {
+    width: 273px;
+    height: 160px;
+    margin-right: 15px;
+    display: inline-block;
+    margin-bottom: 40px;
+    color: #000;
+    overflow: hidden;
+}
+
+.content .content-four .box .box-right li a {
+    text-decoration: none;
+}
+
+.content .content-four .box .box-right li a .iteming1 {
+    width: 118px;
+    height: 158px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    border: 1px solid #efefef;
+}
+
+.content .content-four .box .box-right li a .iteming1 img {
+    width: 100%;
+}
+
+.content .content-four .box .box-right li a .iteming2 {
+    width: 138px;
+    height: 100%;
+    position: relative;
+    padding-left: 15px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.content .content-four .box .box-right li a .iteming2 title {
+    line-height: 20px;
+    font-size: 14px;
+    color: #4A4A4A;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.content .content-four .box .box-right li a .iteming2 strong {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 12px;
+    margin-top: 14px;
+    color: #9B9B9B;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+.content .content-four .box .box-right li a .iteming2 p {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 12px;
+    margin-top: 14px;
+    color: #9B9B9B;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+.content .content-four .box .box-right li a .iteming2 span {
+    width: 138px;
+    position: absolute;
+    left: 15px;
+    bottom: 0;
+    font-size: 16px;
+    color: #FF1268;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
@@ -538,6 +1025,9 @@ li {
     color: #111;
     text-align: center;
 }
+
+
+/* 底部右边 */
 
 .footer_fr {
     float: left;
@@ -700,6 +1190,9 @@ li {
     color: #111;
     list-style: none;
 }
+
+
+/* 右边固定栏 */
 
 .sidebox {
     background: #fff;
