@@ -15,6 +15,7 @@ html {
 .header {
     width: 100%;
     height: 72px;
+    box-shadow: 0 2px 16px 0 rgba(220, 220, 220, .5);
 }
 
 .header .headerw1200 {
@@ -35,6 +36,9 @@ html {
     margin-top: 15px;
     float: left;
 }
+
+
+/* 头部全国 */
 
 .header-location {
     display: block;
@@ -72,6 +76,94 @@ html {
     vertical-align: middle;
 }
 
+
+/* 全国下拉 */
+
+.header .header-location .city-header-wrap {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.header .header-location .city-header {
+    width: 626px;
+    z-index: 999;
+    position: relative;
+    left: -115px;
+    top: 0;
+    margin-top: 60px;
+    background: #FFF;
+    border: 1px solid #F4F4F4;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .05);
+    border-radius: 2px;
+    padding: 21px;
+}
+
+.header .header-location .city-header:after {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 140px;
+    margin-top: -5.5px;
+    width: 0;
+    height: 0;
+    content: '';
+    border-style: solid;
+    border-width: 5px;
+    border-color: #fff #fff transparent transparent;
+    transform: rotate(-45deg);
+    box-shadow: 1px -1px 1px #ccc;
+}
+
+.header .header-location .city-header .now-city {
+    line-height: 25px;
+}
+
+.header .header-location .city-header .title-city {
+    width: 86px;
+}
+
+.header .header-location .city-header .name-city,
+.header .header-location .city-header .title-city {
+    float: left;
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: top;
+    font-size: 16px;
+    color: #111;
+    letter-spacing: .56px;
+}
+
+.header .header-location .city-header .now-city .select-city {
+    color: #FF1268;
+    background-color: #fff4f8;
+    padding: 0 10px;
+}
+
+.header .header-location .city-header .hot-city {
+    line-height: 25px;
+    margin-top: 40px;
+}
+
+.header .header-location .city-header .list-other {
+    width: 525px;
+    display: inline-block;
+    line-height: 29px;
+    margin-top: -3px;
+}
+
+.header .header-location .city-header .other-city {
+    line-height: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #EEE;
+    margin-top: 15px;
+}
+
+
+/* 首页 分类 */
+
 .header-recommend {
     max-width: 220px;
     height: 100%;
@@ -95,6 +187,83 @@ html {
     color: #FF1268;
     cursor: pointer;
 }
+
+.header-recommend .type-recommend:hover {
+    color: #FF1268;
+}
+
+
+/* header右边 */
+
+.header .right-header {
+    min-width: 55px;
+    height: 100%;
+    position: relative;
+    float: right;
+    line-height: 72px;
+}
+
+.header .right-header .box-header {
+    height: 100%;
+    display: inline-block;
+    line-height: 72px;
+    cursor: pointer;
+    position: relative;
+    margin-left: 20px;
+}
+
+
+/* 登录 */
+
+.header .right-header .user-header .i-user {
+    border-radius: 13px;
+}
+
+.header .right-header .box-header .i-box-header {
+    width: 26px;
+    z-index: 20000;
+    display: inline-block;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.header .right-header .box-header .span-box-header {
+    display: inline-block;
+    vertical-align: middle;
+    color: #111;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.header .right-header .user-header .show {
+    display: inline-block;
+}
+
+
+/* 下载 */
+
+.header .right-header .box-header .i-box-header {
+    width: 26px;
+    z-index: 20000;
+    display: inline-block;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.header .right-header .box-header .span-box-header {
+    display: inline-block;
+    vertical-align: middle;
+    color: #111;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.header .right-header .box-header .span-box-header:hover {
+    color: #FF1268;
+}
+
+
+/* 搜索框 */
 
 .header-search {
     width: 401px;
@@ -157,16 +326,105 @@ html {
 
 .out-banner {
     height: 320px;
-    position: relative;
     overflow: hidden;
 }
 
 .banner {
+    position: relative;
     margin: 0 auto;
     height: 320px;
     width: 1200px;
     overflow: hidden;
-    background: yellow;
+}
+
+.banner ul li {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.banner ul li img {
+    width: 1200px;
+    height: 320px;
+    overflow: hidden;
+}
+
+.banner ol {
+    position: absolute;
+    height: 20px;
+    right: 32px;
+    bottom: 23px;
+    z-index: 99;
+}
+
+.banner ol li {
+    float: left;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+    text-indent: -99999px;
+    cursor: pointer;
+    background-color: #fff;
+    opacity: .32;
+}
+
+.banner ol li.active {
+    background: #fff;
+    opacity: 1;
+}
+
+.banner .right,
+.banner .left {
+    position: absolute;
+    top: 50%;
+    margin-top: -32px;
+    width: 56px;
+    height: 64px;
+    display: block;
+    z-index: 101;
+    background: rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.banner .left {
+    left: 0;
+}
+
+.banner .left .arrowleft {
+    position: absolute;
+    left: 24px;
+    right: 20px;
+    top: 50%;
+    display: inline-block;
+    content: "";
+    width: 18px;
+    height: 18px;
+    border: solid #fff;
+    border-width: 2px 2px 0 0;
+    transform: translate(0, -50%) rotate(-135deg);
+}
+
+.banner .right .arrowright {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    display: inline-block;
+    content: "";
+    width: 18px;
+    height: 18px;
+    border: solid #fff;
+    border-width: 2px 2px 0 0;
+    transform: translate(0, -50%) rotate(45deg);
+}
+
+.banner .right {
+    right: 0;
+}
+
+.right:hover,
+.left:hover {
+    background-color: rgb(250, 71, 101);
 }
 
 
@@ -273,6 +531,14 @@ html {
     background-color: pink;
 }
 
+.content .content-one .box .box-left .box-left_bg {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #efefef;
+}
+
 .content .content-one .box .box-left .box-left_info {
     width: 250px;
     height: 84px;
@@ -297,6 +563,11 @@ html {
     margin-top: 12px;
     font-size: 20px;
     color: #fff;
+}
+
+.content .content-one .box .box-left .box-left_info .title:hover,
+.content .content-one .box .box-left .box-left_info .detail:hover {
+    color: #FF1268;
 }
 
 .content .content-one .box .box-right {
@@ -379,6 +650,12 @@ html {
     word-break: break-all;
 }
 
+.content .content-one .box .box-right li a .iteming2 title:hover,
+.content .content-one .box .box-right li a .iteming2 strong:hover,
+.content .content-one .box .box-right li a .iteming2 p:hover {
+    color: #FF1268;
+}
+
 .content .content-one .box .box-right li a .iteming2 span {
     width: 138px;
     position: absolute;
@@ -444,6 +721,14 @@ html {
     background-color: orange;
 }
 
+.content .content-two .box .box-left .box-left_bg {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #efefef;
+}
+
 .content .content-two .box .box-left .box-left_info {
     width: 250px;
     height: 84px;
@@ -468,6 +753,11 @@ html {
     margin-top: 12px;
     font-size: 20px;
     color: #fff;
+}
+
+.content .content-two .box .box-left .box-left_info .title:hover,
+.content .content-two .box .box-left .box-left_info .detail:hover {
+    color: #FF1268;
 }
 
 .content .content-two .box .box-right {
@@ -550,6 +840,12 @@ html {
     word-break: break-all;
 }
 
+.content .content-two .box .box-right li a .iteming2 title:hover,
+.content .content-two .box .box-right li a .iteming2 strong:hover,
+.content .content-two .box .box-right li a .iteming2 p:hover {
+    color: #FF1268;
+}
+
 .content .content-two .box .box-right li a .iteming2 span {
     width: 138px;
     position: absolute;
@@ -614,6 +910,14 @@ html {
     overflow: hidden;
 }
 
+.content .content-three .box .box-left .box-left_bg {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #efefef;
+}
+
 .content .content-three .box .box-left .box-left_info {
     width: 250px;
     height: 84px;
@@ -638,6 +942,11 @@ html {
     margin-top: 12px;
     font-size: 20px;
     color: #fff;
+}
+
+.content .content-three .box .box-left .box-left_info .title:hover,
+.content .content-three .box .box-left .box-left_info .detail:hover {
+    color: #FF1268;
 }
 
 .content .content-three .box .box-right {
@@ -719,6 +1028,12 @@ html {
     word-break: break-all;
 }
 
+.content .content-three .box .box-right li a .iteming2 title:hover,
+.content .content-three .box .box-right li a .iteming2 strong:hover,
+.content .content-three .box .box-right li a .iteming2 p:hover {
+    color: #FF1268;
+}
+
 .content .content-three .box .box-right li a .iteming2 span {
     width: 138px;
     position: absolute;
@@ -784,6 +1099,14 @@ html {
     background-color: orange;
 }
 
+.content .content-four .box .box-left .box-left_bg {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #efefef;
+}
+
 .content .content-four .box .box-left .box-left_info {
     width: 250px;
     height: 84px;
@@ -808,6 +1131,11 @@ html {
     margin-top: 12px;
     font-size: 20px;
     color: #fff;
+}
+
+.content .content-four .box .box-left .box-left_info .title:hover,
+.content .content-four .box .box-left .box-left_info .detail:hover {
+    color: #FF1268;
 }
 
 .content .content-four .box .box-right {
@@ -899,6 +1227,12 @@ html {
     word-break: break-all;
 }
 
+.content .content-four .box .box-right li a .iteming2 title:hover,
+.content .content-four .box .box-right li a .iteming2 strong:hover,
+.content .content-four .box .box-right li a .iteming2 p:hover {
+    color: #FF1268;
+}
+
 .content .content-four .box .box-right li a .iteming2 span {
     width: 138px;
     position: absolute;
@@ -968,6 +1302,10 @@ li {
     color: #111;
 }
 
+.footer_nav_list a:hover {
+    color: #FF1268;
+}
+
 .footer_nav_grep {
     float: left;
     padding: 0 24px;
@@ -1017,7 +1355,13 @@ li {
     width: 87px;
     text-align: center;
     margin-left: 40px;
-    background-color: pink;
+}
+
+.footer_fl_box img {
+    display: block;
+    width: 87px;
+    height: 87px;
+    margin-bottom: 8px;
 }
 
 .footer_fl_box span {
@@ -1120,6 +1464,15 @@ li {
     font-size: 13px;
     color: #111;
     text-decoration: none;
+}
+
+.footer_fr2 .footer_fr_certificate a:hover,
+.footer_fr3 .footer_fr_certificate a:hover {
+    color: #FF1268;
+}
+
+.footer_fr_grep {
+    padding: 0 10px;
 }
 
 .footer_fr_grep li {
@@ -1236,4 +1589,36 @@ li {
     margin: 0;
     margin-top: 5px;
     font-size: 12px;
+}
+
+.sidebox .item .erweima {
+    background: #fff url(//img.alicdn.com/tfs/TB1TBEJSkvoK1RjSZFNXXcxMVXa-280-280.jpg) no-repeat center center;
+    background-size: 90%;
+}
+
+.sidebox .item .erweima {
+    display: none;
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    left: -92px;
+    top: -6px;
+    box-shadow: 2px 2px 4px #ccc;
+    padding: 5px;
+}
+
+.sidebox .item:hover .erweima {
+    display: block;
+}
+
+.sidebox .item .icon {
+    background-image: url(https://img.alicdn.com/tfs/TB1u1U9xmzqK1RjSZFHXXb3CpXa-64-180.png);
+    margin: 0 auto;
+    width: 32px;
+    height: 29px;
+    background-size: 100%;
+}
+
+.sidebox .item .gotop {
+    background-position: 4px -62px;
 }
