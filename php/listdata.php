@@ -14,7 +14,7 @@ $conn->query('SET NAMES UTF8');
 header('Access-Control-Allow-Origin:*');
 header('Access-Control-Allow-Method:POST,GET');
 
-$pagesize = 3; //单个页面展示的数据条数
+$pagesize = 10; //单个页面展示的数据条数
 
 $result = $conn->query("select * from damai_list"); //获取数据的结果集(记录集)
 

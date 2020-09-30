@@ -380,6 +380,10 @@ html {
     float: left;
 }
 
+.box-main-main {
+    margin-bottom: 50px;
+}
+
 .box-content {
     display: inline-block;
     width: 870px;

@@ -76,7 +76,7 @@ define([], function() {
             });
             //渲染
             $.ajax({
-                url: 'http://192.168.13.71/damai/php/damaiindexli.php',
+                url: 'http://192.168.13.45/damai/php/damaiindexli.php',
                 dataType: 'json'
             }).done(function(data) {
                 let $strhtml = '';

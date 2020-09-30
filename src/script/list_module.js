@@ -9,24 +9,24 @@ define(['pagination', 'jlazyload'], function() { //依赖分页和懒加载
             let next = null; //后一个价格
             const $list = $('.box-content');
             $.ajax({
-                url: 'http://192.168.13.71/damai/php/listdata.php',
+                url: 'http://192.168.13.45/damai/php/listdata.php',
                 dataType: 'json'
             }).done(function(data) {
                 let $strhtml = '';
                 $.each(data, function(index, value) {
                     $strhtml += `<li>    
-                    <a href="">
-                    <div class="iteming1">
+                    <a href="detail.html?sid=${value.sid}">
+                        <div class="iteming1">
                             <img src="${value.url}" alt="">
                         </div>
-                    <div class="iteming2">
+                        <div class="iteming2">
                             <title>${value.title}</title>
                             <strong>${value.address}</strong>
                             <p>${value.showtime}</p>
                             <span class="price">￥${value.price}</span>
                         </div>
-                        </a>
-                    </li>
+                    </a>
+                </li>
                 `;
                 });
                 $(".box-content").html(($strhtml));
@@ -59,9 +59,9 @@ define(['pagination', 'jlazyload'], function() { //依赖分页和懒加载
                 homePage: '首页',
                 endPage: '尾页',
                 callback: function(api) {
-                    console.log(api.getCurrent()); //获取的页码给后端
+                    //console.log(api.getCurrent()); //获取的页码给后端
                     $.ajax({
-                        url: 'http://192.168.13.71/damai/php/listdata.php',
+                        url: 'http://192.168.13.45/damai/php/listdata.php',
                         data: {
                             page: api.getCurrent() //传输页面
                         },
@@ -70,18 +70,18 @@ define(['pagination', 'jlazyload'], function() { //依赖分页和懒加载
                         let $strhtml = '';
                         $.each(data, function(index, value) {
                             $strhtml += `<li>    
-                            <a href="">
-                            <div class="iteming1">
+                            <a href="detail.html?sid=${value.sid}">
+                                <div class="iteming1">
                                     <img src="${value.url}" alt="">
                                 </div>
-                            <div class="iteming2">
+                                <div class="iteming2">
                                     <title>${value.title}</title>
                                     <strong>${value.address}</strong>
                                     <p>${value.showtime}</p>
                                     <span class="price">￥${value.price}</span>
                                 </div>
-                                </a>
-                            </li>
+                            </a>
+                        </li>
                         `;
                         });
                         $(".box-content").html(($strhtml));
@@ -113,7 +113,6 @@ define(['pagination', 'jlazyload'], function() { //依赖分页和懒加载
 
             //升序
             $('button').eq(1).on('click', function() {
-                console.log(11);
                 for (let i = 0; i < array.length - 1; i++) {
                     for (let j = 0; j < array.length - i - 1; j++) {
                         prev = parseFloat(array[j].find('.price').html().substring(1)); //获取上一个价格
