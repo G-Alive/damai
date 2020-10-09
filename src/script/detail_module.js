@@ -3,7 +3,7 @@ define(['jcookie'], function() {
         init: function() {
             //1.获取列表页传来的sid
             let $sid = location.search.substring(1).split('=')[1];
-            const $smallpic = $('.smallpic');
+            const $smallpic = $('#smallpic');
             const $title = $('.loadtitle');
             const $price = $('.loadpcp');
             const $showtime = $('.showtime');
@@ -53,16 +53,19 @@ define(['jcookie'], function() {
             }
 
 
-
             $('.p-btn a').on('click', function() {
                 //获取当前商品对应的sid
                 let $sid = $(this).parents('.goodsinfo').find('#smallpic').attr('sid');
-                //判断是第一次点击还是多次点击
-                //多次点击
-                //$.inArray(value,array,[fromIndex])
-                //确定第一个参数在数组中的位置，从0开始计数(如果没有找到则返回 -1 )。
+                console.log('smallpic', $(this).parents('.goodsinfo').find('#smallpic'))
+                console.log('$sid', $sid)
+                localStorage.setItem('sid', $sid)
+                    //判断是第一次点击还是多次点击
+                    //多次点击
+                    //$.inArray(value,array,[fromIndex])
+                    //确定第一个参数在数组中的位置，从0开始计数(如果没有找到则返回 -1 )。
                 cookietoarray();
-                if ($.inArray($sid, arrsid) != -1) { //$sid存在，商品列表存在，数量累加
+                if ($.inArray($sid, arrsid) != -1) {
+                    //$sid存在，商品列表存在，数量累加
                     //先取出cookie中存在的数量+当前添加的数量，一起添加到cookie中。
                     let $num = parseInt(arrnum[$.inArray($sid, arrsid)]) + parseInt($('#count').val()); //取值
                     arrnum[$.inArray($sid, arrsid)] = $num; //赋值
@@ -74,7 +77,7 @@ define(['jcookie'], function() {
                     arrnum.push($('#count').val()); //将数量push到arrnum数组中
                     $.cookie('cookienum', arrnum, { expires: 10, path: '/' });
                 }
-                alert('按钮触发了');
+                // alert('按钮触发了');
             });
         }
     }

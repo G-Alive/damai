@@ -1,6 +1,12 @@
 define(['pagination', 'jlazyload'], function() { //依赖分页和懒加载
     return {
         init: function() {
+            //点击回到顶部
+            var $top = $('.sidebox .backtop')
+            $top.on('click', function() {
+                $(window).scrollTop(0);
+                return false;
+            });
             //1.渲染列表页的数据-默认渲染第一页
             //排序的变量
             let array_default = []; //排序前的li数组，默认数组

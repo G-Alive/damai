@@ -4,12 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script/require.js" data-main="script/main.js" defer async="true" id="currentpage" data-page="detail_module"></script>
+    <title>登录</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="script/require.js" data-main="script/main.js" defer async="true" id="currentpage" data-page="login_module"></script>
 </head>
 
 <body>
-    这里是登录
+    <!-- 头部 -->
+    <div class="header">
+        <div class="headerw1200">
+            <!-- 大麦logo -->
+            <a href="#">
+                <img class="dlogo" src="//img.alicdn.com/tfs/TB1fbVFfu3tHKVjSZSgXXX4QFXa-230-104.png" alt="大麦">
+            </a>
+            <!-- 右侧header -->
+            <a href="#" class="right-header">English</a>
+        </div>
+    </div>
+    <div class="main">
+        <div class="login">
+            <a class="ad">
+                <img src="//img.alicdn.com/tfs/TB1NkOydrus3KVjSZKbXXXqkFXa-720-400.png_q75.jpg" alt="">
+            </a>
+            <fieldset class="field">
+                <form class="biao" action="">
+                    <p class="p"><label for="">用户姓名：</label><input type="text" class="username"></p>
+                    <p><label for="">用户密码：</label><input type="password" class="password"></p>
+                    <p class="user"><input type="button" value="登录" class="btn"></p>
+                    <a href="registry.html">免费注册</a>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+
 </body>
 
 </html>

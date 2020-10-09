@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    font-size: 14px;
+    font-family: "\5FAE\8F6F\96C5\9ED1";
+}
+
+
+/* 头部 */
+
+.header {
+    width: 100%;
+    height: 72px;
+    box-shadow: 0 2px 16px 0 rgba(220, 220, 220, .5);
+}
+
+.header .headerw1200 {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    font-size: 0;
+}
+
+.header .headerw1200 a {
+    cursor: pointer;
+}
+
+.headerw1200 .dlogo {
+    width: 92px;
+    height: auto;
+    margin-top: 15px;
+    float: left;
+}
+
+
+/* header右边 */
+
+.header .headerw1200 .right-header {
+    float: right;
+    display: inline;
+    margin-top: 24px;
+    width: 121px;
+    height: 38px;
+    line-height: 38px;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #ebebeb;
+    font-size: 14px;
+    color: #888;
+    text-decoration: none;
+}
+
+.header .right-header:hover {
+    color: #FF1268;
+}
+
+.main {
+    background: linear-gradient(to right, #17073d, #17073d, #17073d);
+}
+
+.main .login {
+    height: 600px;
+    margin: 0 auto;
+    width: 1150px;
+    overflow: hidden;
+}
+
+.main .login .ad {
+    float: left;
+    margin-top: 90px;
+    text-decoration: none;
+}
+
+.main .login img {
+    width: 720px;
+    height: 400px;
+    border: 0;
+}
+
+.field {
+    margin: 90px auto 10px;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+    width: 350px;
+    min-height: 310px;
+    background: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.field .biao {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    padding-top: 2px;
+}
+
+.field .biao .p {
+    margin-top: 70px;
+}
+
+.field .biao p {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.field .biao .user {
+    width: 88%;
+    margin: 0 auto;
+}
+
+.field .biao .user .btn {
+    width: 100%;
+    background-color: #ff1268;
+    border-color: #ff1268;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.field .biao a {
+    position: absolute;
+    right: 55px;
+    bottom: 50px;
+    font-size: 16px;
+}
